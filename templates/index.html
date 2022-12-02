@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Submit a guess</h2>
+
+<p>Time on the clock: <span id="timer">60</span> seconds</p>
+
+<div>
+    <table>
+        {% for lst in board %}
+        <tr></tr>
+        {%for cell in lst%}
+        <td>{{cell}}</td>
+        {%endfor %}
+        {%endfor %}
+
+    </table>
+
+</div>
+
+<form id="boggle-form">
+    <input type="text" class="word" name="word" placeholder="Enter a word">
+    <button type="submit" class="btn" id="check-word-btn">Submit</button>
+</form>
+
+<div id="word-res" class="box"></div>
+
+{% endblock %}

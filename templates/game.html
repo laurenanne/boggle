@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Submit a guess</h1>
+
+<div>
+    {{board}}
+</div>
+
+<form method="POST" class="boggle-word">
+    <input type="text" class="word" name="word" placeholder="Enter a word">
+    <button class="btn" id="check-word-btn">Submit</button>
+</form>
+
+<div id="word-res" class="box"></div>
+
+{% endblock %}
